@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cole Marter | INFO 2439 | Assignment 6</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="apple-touch-icon" href="_images/icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="_images/icon6.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="_images/icon5.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="_images/icon4.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="_images/icon3.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="_images/icon2.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="_images/icon1.png">
+	<link rel="manifest" href="manifest.json">
+  </head>
+<body>
+<!-- Cole Marter
+     index.htm
+     INFO2439
+     Thoendel
+     10/27/19
+-->
+<div data-role="page" id="first">
+	<div data-role="header">
+		<h1>List Updates</h1>
+	</div>
+	<div data-role="content">
+		<ul id="theList" data-role="listview" data-inset="true">
+		
+		</ul>	
+		<form>
+		<div data-role="fieldcontain">
+		    <label for="additem">New Item</label>
+		    <input type="text" name="additem" id="additem" value=""  />
+			<label for="additem">New Address</label>
+			<input type="text" name="addaddress" id="addaddress" value=""  />
+		</div>	
+		<input type="button" id="testBtn" value="Add It">
+		</form>
+	</div>
+</div>
+<script>
+$("#testBtn").click(function() {
+	var itemToAdd = $.trim($("#additem").val());
+	var addressToAdd = $.trim($("#addaddress").val());
+	if(itemToAdd == "") return;
+	if(addressToAdd == "") return;
+	<!-- <li><a href="http://url: addressToAdd">itemToAdd</a></li> -->
+	<!-- $("#theList").append("<li>"+itemToAdd+"</li>");
+	$("#theList").append("<li>"+itemToAdd+"</li>");
+	$("#theList").listview("refresh");
+});
+</script>
+</body>
+</html>
